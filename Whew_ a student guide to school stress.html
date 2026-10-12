@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Whew is a student guide to school and exam stress: what it is, what helps, and where to get support.">
+<title>Whew: a student guide to school stress</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eaf2fd; --card:#ffffff; --ink:#1f2a44; --muted:#556080; --accent:#2f8f83; --accent-ink:#ffffff;
+  --soft:#cfe3fb; --alert:#ffe8a3; --alert-ink:#3a2f00; --line:#bcd2ef;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121a2e; --card:#1b2542; --ink:#eef0f8; --muted:#a8b0cc; --accent:#5fc4b6; --accent-ink:#0f1a18;
+    --soft:#1c2f52; --alert:#4a3d0a; --alert-ink:#ffeeb5; --line:#2f3d63;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121a2e; --card:#1b2542; --ink:#eef0f8; --muted:#a8b0cc; --accent:#5fc4b6; --accent-ink:#0f1a18;
+  --soft:#1c2f52; --alert:#4a3d0a; --alert-ink:#ffeeb5; --line:#2f3d63;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+h2{font-size:clamp(1.6rem,3.6vw,2.2rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.help{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--alert);color:var(--alert-ink);font-size:.95rem;padding:10px 20px;text-align:center}
+.help a{color:inherit;font-weight:700}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;padding:18px 0;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink);text-decoration:underline}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;padding:30px 0 70px}
+.hero p.lead{font-size:1.2rem;color:var(--muted)}
+.breather{display:flex;flex-direction:column;align-items:center;gap:18px;background:var(--soft);border-radius:28px;padding:32px 20px}
+.orb{width:150px;height:150px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:var(--accent-ink);font-weight:700;transition:transform 4s ease-in-out}
+.orb.in{transform:scale(1.35)}
+.orb.hold{transform:scale(1.35);transition-duration:.3s}
+.orb.out{transform:scale(1);transition-duration:6s}
+button.btn{font:700 1rem "DM Sans",sans-serif;background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:12px 24px;cursor:pointer}
+.breather small{color:var(--muted);text-align:center}
+section{padding:50px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+#why .panel,#friend .panel{background:var(--soft);border-color:transparent}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+ul{padding-left:1.2em;margin:0 0 1em}
+li{margin-bottom:.4em}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"\2212"}
+details > div{padding-bottom:10px}
+.band{background:var(--soft);border-radius:28px;padding:36px 28px}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.res .panel h3{margin-bottom:.3em}
+.big{font:700 1.5rem "Bricolage Grotesque",sans-serif}
+.src{font-size:.9rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:36px 0 60px;color:var(--muted);font-size:.95rem}
+footer p{max-width:70ch}
+@media(max-width:760px){.hero,.two{grid-template-columns:1fr}.hero{gap:28px;padding-bottom:40px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orb,.orb.out{transition:none}}
+</style>
+</head>
+<body>
+<div class="help" role="region" aria-label="Crisis help">
+  Need help right now? Call or text <a href="tel:988">988</a>, or text HOME to <a href="sms:741741&body=HOME">741741</a> (US).
+</div>
+
+<div class="wrap">
+  <p style="margin:20px 0 0;font:700 1.6rem 'Bricolage Grotesque','DM Sans',system-ui,sans-serif">Whew <span style="font:400 1rem 'DM Sans',system-ui,sans-serif;color:var(--muted)">a student guide to school stress</span></p>
+  <nav aria-label="Main">
+    <a href="#why">Why not push through</a>
+    <a href="#what">What it is</a>
+    <a href="#toolkit">Exam toolkit</a>
+    <a href="#sleep">Sleep</a>
+    <a href="#research">The research</a>
+    <a href="#more">When it's more than stress</a>
+    <a href="#friend">Helping a friend</a>
+    <a href="#resources">Resources</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>We all get school stress. Don't just push through it.</h1>
+      <p class="lead">Everyone gets stressed about school, but a lot of us never talk about it. This site covers what stress and anxiety actually are, what can help around exams, and where to go if it starts to feel like too much.</p>
+    </div>
+    <div class="breather">
+      <div class="orb" id="orb" aria-live="polite">Ready</div>
+      <button class="btn" id="go" type="button">Try 1 minute of breathing</button>
+      <small>Breathe in for 4, hold for 1, out for 6. If it feels weird or uncomfortable, just stop.</small>
+    </div>
+  </header>
+
+  <section id="why">
+    <h2>Why not just push through it?</h2>
+    <p>Pushing through can work for one rough week. It's a problem when it turns into the plan for every week.</p>
+    <div class="two">
+      <div class="panel">
+        <h3>Stress needs a break</h3>
+        <p>A little stress is normal. If it never gets a break, it can show up as bad sleep, headaches, a short temper, or feeling burned out.</p>
+      </div>
+      <div class="panel">
+        <h3>You study worse when you're run down</h3>
+        <p>When you're stressed and tired, focusing and remembering things gets harder. Studying more hours doesn't always lead to better grades.</p>
+      </div>
+      <div class="panel">
+        <h3>Ignoring it doesn't make it leave</h3>
+        <p>Worries you shove down tend to come back at bad times, like halfway through a test. Everything on this site involves doing something about the stress instead of pretending it isn't there.</p>
+      </div>
+      <div class="panel">
+        <h3>Asking for help is easier early</h3>
+        <p>Talking to someone when you're a little overwhelmed is a lot easier than waiting until you're completely burned out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="what">
+    <h2>Stress and anxiety aren't the same thing</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>Stress</h3>
+        <p>Your body's reaction to pressure, like a test, a deadline, or too many things at once. It usually fades once the thing is over.</p>
+      </div>
+      <div class="panel">
+        <h3>Anxiety</h3>
+        <p>Worry that sticks around even when nothing is actually threatening you, or that feels way bigger than the situation. It can start affecting your sleep, grades, and friendships.</p>
+      </div>
+    </div>
+    <p style="margin-top:22px">A little stress before a big test is normal and can help you focus. The goal is feeling like you can handle it, not feeling nothing.</p>
+
+    <h3 style="margin-top:30px">What it can look like</h3>
+    <div class="two">
+      <div class="panel">
+        <p><strong>In your body</strong></p>
+        <ul><li>Stomachaches or headaches</li><li>Racing heart or tight chest</li><li>Trouble sleeping, or feeling exhausted</li><li>Shaky hands or sweating</li></ul>
+      </div>
+      <div class="panel">
+        <p><strong>In your head and habits</strong></p>
+        <ul><li>Mind going blank during tests</li><li>Nonstop "what if I fail?" thoughts</li><li>Putting off studying because it feels like too much</li><li>Snapping at people or pulling away</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="toolkit">
+    <h2>Exam toolkit</h2>
+    <p>These are small things that tend to help. Try one, keep what works, and skip what doesn't.</p>
+    <details open>
+      <summary>Before the exam</summary>
+      <div>
+        <ul>
+          <li><strong>Break it into chunks.</strong> "Study chemistry" is vague. "Do 10 practice problems on moles" is something you can finish.</li>
+          <li><strong>Plan breaks.</strong> Short breaks between study blocks make it easier to keep going.</li>
+          <li><strong>Protect your sleep.</strong> All-nighters often backfire, since rest helps your memory.</li>
+          <li><strong>Move a little.</strong> A walk or some stretching can take the edge off.</li>
+          <li><strong>Talk about it.</strong> Telling a friend, parent, or teacher how you feel often makes it feel smaller.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>During the exam</summary>
+      <div>
+        <ul>
+          <li><strong>Pause and breathe.</strong> A few slow breaths with a longer exhale can calm your body down.</li>
+          <li><strong>Start with what you know.</strong> Easy questions first build momentum.</li>
+          <li><strong>If your mind goes blank,</strong> skip ahead and come back later. It often returns on its own.</li>
+          <li><strong>Catch the spiral.</strong> Thoughts like "I'm going to fail everything" are worries, not facts. Bring your attention back to the question in front of you.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>After the exam</summary>
+      <div>
+        <ul>
+          <li><strong>Don't replay every answer.</strong> You can't change it now, so give your brain a rest.</li>
+          <li><strong>Do something that isn't school.</strong> Eat, hang out with friends, listen to music, watch a show.</li>
+          <li><strong>Cut yourself some slack.</strong> One grade doesn't decide your future.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>When the pressure comes from home or from yourself</summary>
+      <div>
+        <p>Sometimes the heaviest part is expectations, from parents, teachers, or the voice in your own head. It can help to tell someone you trust what's realistic for you. A school counselor can also help you talk to your family or adjust your workload.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="sleep">
+    <div class="band">
+      <h2>Why sleep matters (a lot)</h2>
+      <p>Staying up late to study feels productive, but sleep is part of how studying works. It helps your brain store what you learned, and it helps you focus and handle stress the next day.</p>
+      <p>Health organizations like the CDC recommend about 8 to 10 hours a night for teens. Most of us get less than that, so even small improvements help.</p>
+      <ul>
+        <li><strong>Pick a regular bedtime</strong> and stick to it, even on weekends if you can.</li>
+        <li><strong>Put your phone away</strong> 30 minutes before bed, or at least turn on do-not-disturb.</li>
+        <li><strong>Write tomorrow's to-do list</strong> before bed so your brain can stop holding onto it.</li>
+        <li><strong>Don't skip sleep the night before an exam.</strong> A rested brain usually beats an extra hour of cramming.</li>
+      </ul>
+      <p>If worry keeps you up a lot, or you're always exhausted, bring it up with a doctor or school counselor.</p>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>What the research says</h2>
+    <p>Psychologists have studied test stress for a long time. Here are three ideas that connect to the tips above, along with the limits of each one.</p>
+    <div class="two">
+      <div class="panel">
+        <h3>Writing out your worries before a test</h3>
+        <p>Gerardo Ramirez and Sian Beilock had students write about their feelings and worries for about 10 minutes right before a high-stakes exam. Across their experiments, including one with ninth-grade biology students, the students who wrote did better than those who didn't. Their explanation was that worries take up the same mental workspace you need for problem solving, so getting them onto paper frees some of it up.</p>
+        <p><strong>Keep in mind:</strong> other researchers questioned how widely this applies, including whether it helps students who aren't very anxious. It's worth trying, but it's not guaranteed.</p>
+        <p class="src">Ramirez &amp; Beilock (2011), <em>Science</em>, 331(6014). <a href="https://doi.org/10.1126/science.1199427" rel="noopener">doi.org/10.1126/science.1199427</a></p>
+      </div>
+      <div class="panel">
+        <h3>Rethinking your nerves</h3>
+        <p>In a study led by Jeremy Jamieson, students preparing for the GRE (a grad school entrance exam) were told that feeling revved up can help performance. They scored higher on the math section of a practice test than a comparison group, and again on their real GRE a few months later. The takeaway is that a pounding heart doesn't have to mean you're doing badly. It can mean your body is getting ready.</p>
+        <p><strong>Keep in mind:</strong> the participants were college-age adults, and the effect showed up on the math section. It doesn't mean stress is always good for you.</p>
+        <p class="src">Jamieson, Mendes, Blackstock &amp; Schmader (2010), <em>Journal of Experimental Social Psychology</em>, 46(1). <a href="https://dash.harvard.edu/handle/1/4214916" rel="noopener">Read the abstract</a></p>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:22px">
+      <h3>The "sweet spot" idea</h3>
+      <p>An early psychology paper by Robert Yerkes and John Dodson (1908), based on experiments with mice, is often cited for the idea that moderate pressure helps performance while too little or too much hurts it. People use it to explain why a bit of stress can help you focus. Later researchers have said the real picture is more complicated, so it works better as a rough guide than a rule.</p>
+    </div>
+    <p style="margin-top:22px">If you want to dig deeper, search the study titles on Google Scholar, or read the summaries on the American Psychological Association's site at apa.org.</p>
+  </section>
+
+  <section id="more">
+    <div class="band">
+      <h2>When it's more than stress</h2>
+      <p>Talk to a trusted adult, school counselor, or doctor if you notice that:</p>
+      <ul>
+        <li>The worry or dread has lasted for weeks and isn't easing up</li>
+        <li>You're avoiding school, friends, or things you used to like</li>
+        <li>Your sleep, appetite, or grades have changed a lot</li>
+        <li>You're having panic attacks</li>
+        <li>You feel hopeless, or you're having thoughts of hurting yourself</li>
+      </ul>
+      <p>Anxiety is common and treatable, and asking for help is a normal thing to do. A professional can figure out what's going on and what would help, which this site can't do.</p>
+      <p><strong>If you're thinking about hurting yourself, or you're in danger, call or text 988 or call 911 right now.</strong></p>
+    </div>
+  </section>
+
+  <section id="friend">
+    <h2>If a friend is struggling</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>What helps</h3>
+        <ul>
+          <li>Ask directly and kindly: "Hey, you seem stressed lately. How are you doing?"</li>
+          <li>Listen more than you try to fix things</li>
+          <li>Let them know you're there, and check in again later</li>
+          <li>Encourage them to talk to a trusted adult or counselor</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>What to avoid</h3>
+        <ul>
+          <li>Saying "just calm down" or "it's not a big deal"</li>
+          <li>Comparing their stress to yours or someone else's</li>
+          <li>Promising to keep it secret if you're worried about their safety</li>
+        </ul>
+        <p>If a friend talks about hurting themselves, tell a trusted adult right away. You shouldn't have to handle that alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2>Where to get support</h2>
+    <p>These are free. The first two are for the US.</p>
+    <div class="res">
+      <div class="panel">
+        <h3>988 Suicide &amp; Crisis Lifeline</h3>
+        <p class="big">Call or text 988</p>
+        <p>Free support any time, for anyone in distress. <a href="https://988lifeline.org" rel="noopener">988lifeline.org</a></p>
+      </div>
+      <div class="panel">
+        <h3>Crisis Text Line</h3>
+        <p class="big">Text HOME to 741741</p>
+        <p>Text with a trained crisis counselor. <a href="https://www.crisistextline.org" rel="noopener">crisistextline.org</a></p>
+      </div>
+      <div class="panel">
+        <h3>Learn more</h3>
+        <p>The National Institute of Mental Health has plain-language pages on anxiety disorders and getting help. <a href="https://www.nimh.nih.gov" rel="noopener">nimh.nih.gov</a></p>
+      </div>
+      <div class="panel">
+        <h3>Your school</h3>
+        <p>Your school counselor or nurse is a good first stop. They can talk with you, point you to other support, and help with workload or accommodations.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p id="about"><strong>About me.</strong> Made by Kriti, a high school student. School stress often gets brushed off as normal, but for a lot of students it can become overwhelming. I made this site to help people understand it and know where to turn for support.</p>
+    <p><strong>About this site.</strong> Whew is an educational project I made as a student. It isn't medical advice and can't diagnose or treat anything, and it's not a replacement for a counselor, therapist, or doctor.</p>
+    <p>The information here is general and based on commonly shared guidance from health organizations. For specifics, check the sources above or ask a professional.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var orb=document.getElementById('orb'), btn=document.getElementById('go'), running=false, timers=[];
+  function clear(){timers.forEach(clearTimeout);timers=[];}
+  function stop(){
+    clear();running=false;orb.className='orb';orb.textContent='Ready';btn.textContent='Try 1 minute of breathing';
+  }
+  function cycle(n){
+    if(!running)return;
+    if(n>=4){orb.className='orb';orb.textContent='Nice work';running=false;btn.textContent='Go again';return;}
+    orb.className='orb in';orb.textContent='In';
+    timers.push(setTimeout(function(){orb.className='orb hold';orb.textContent='Hold';},4000));
+    timers.push(setTimeout(function(){orb.className='orb out';orb.textContent='Out';},5000));
+    timers.push(setTimeout(function(){cycle(n+1);},11000));
+  }
+  btn.addEventListener('click',function(){
+    if(running){stop();return;}
+    running=true;btn.textContent='Stop';
+    requestAnimationFrame(function(){cycle(0);});
+  });
+})();
+</script>
+</body>
+</html>
